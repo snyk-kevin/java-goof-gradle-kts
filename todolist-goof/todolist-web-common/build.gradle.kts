@@ -7,10 +7,10 @@ plugins {
 }
 
 dependencies {
-    implementation("com.fasterxml.jackson.core:jackson-core:2.6.5")
-    implementation("com.fasterxml.jackson.core:jackson-databind:2.6.5")
-    implementation("com.fasterxml.jackson.core:jackson-annotations:2.6.5")
-    implementation(project(":todolist-core"))
+    implementation("com.fasterxml.jackson.core:jackson-core:${properties["java.goof.jackson_version"]}")
+    implementation("com.fasterxml.jackson.core:jackson-databind:${properties["java.goof.jackson_version"]}")
+    implementation("com.fasterxml.jackson.core:jackson-annotations:${properties["java.goof.jackson_version"]}")
+    api(project(":todolist-core"))
     implementation("javax:javaee-web-api:7.0")
     implementation("javax.servlet:jstl:1.2")
     implementation("org.hibernate:hibernate-validator:4.3.1.Final")
